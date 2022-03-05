@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Children } from 'react'
 import { Text, RichText, Image, types } from 'react-bricks/frontend'
 
 //=============================
@@ -36,11 +36,11 @@ const MyHeroUnit: types.Brick<HeroUnitProps> = ({ padding }) => {
               {props.children}
             </h1>
           )}
-          placeholder="Type a title..."
-          propName="title"
           renderPlaceholder={(props) => (
             <span className="opacity-30">{props.children}</span>
           )}
+          placeholder="Type a title..."
+          propName="title"
         />
         <RichText
           renderBlock={(props) => (

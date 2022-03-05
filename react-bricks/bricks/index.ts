@@ -1,12 +1,27 @@
 import { types } from 'react-bricks/frontend'
-import blog from 'react-bricks-ui/blog'
-import website from 'react-bricks-ui/website'
-import HeroUnit from './MyHeroUnit'
+
+// =========================================
+// REACT BRICKS UI
+// You may also import { Single Bricks }
+// to reduce the bundle size
+import Blog from 'react-bricks-ui/blog'
+import Website from 'react-bricks-ui/website'
+
+// Example custom brick
+import MyHeroUnit from './MyHeroUnit'
+import MdwpHeroUnit from './MdwpHeroUnit'
+import MdwpContentUnit from './MdwpContentUnit'
+import MdwpSlide from './MdwpSlide'
+import MdwpSlider from './MdwpSlider'
 
 const bricks: types.Brick<any>[] = [
-  ...website,
-  ...blog,
-  HeroUnit, // Example custom brick
+  ...Website,
+  ...Blog,
+  MyHeroUnit,
+  MdwpHeroUnit,
+  MdwpContentUnit,
+  MdwpSlide,
+  MdwpSlider
   // Put here your other bricks...
 ]
 

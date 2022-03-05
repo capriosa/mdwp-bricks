@@ -27,6 +27,14 @@ const Home: React.FC<HomeProps> = ({ page, error }) => {
           <Head>
             <title>{page.meta.title}</title>
             <meta name="description" content={page.meta.description} />
+            <link
+              rel="stylesheet"
+             href="https://unpkg.com/swiper@6/swiper-bundle.min.css"
+            />   
+            <link
+              rel="stylesheet"
+              href="https://unpkg.com/swiper@6/swiper.min.css"
+            />  
           </Head>
           <PageViewer page={pageOk} />
         </>

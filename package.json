@@ -20,7 +20,8 @@
     "react-bricks": "^3.2.14",
     "react-bricks-ui": "^0.3.20",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "swiper": "^6.8.4"
   },
   "devDependencies": {
     "@types/node": "^17.0.21",
