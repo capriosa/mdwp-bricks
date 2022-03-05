@@ -1,11 +1,5 @@
 import { useContext } from 'react'
-import {
-  ReactBricksContext,
-  PageViewer,
-  fetchPage,
-  cleanPage,
-  types,
-} from 'react-bricks/frontend'
+import { ReactBricksContext, PageViewer, fetchPage, cleanPage, types } from 'react-bricks/frontend'
 import Head from 'next/head'
 import { GetStaticProps } from 'next'
 
