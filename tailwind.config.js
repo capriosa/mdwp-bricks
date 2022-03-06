@@ -6,6 +6,6 @@ module.exports = {
     './node_modules/react-bricks-ui/**/*.js',
   ],
   darkMode: 'class',
-  theme: {},
+  
 }
 

@@ -39,7 +39,7 @@ export const Colors = [
   },
   {
     label: 'Blue light',
-    value: { color: '#e0f2fe', className: 'text-sky-100' },
+    value: { color: '#e0f2fe', className: 'text-sky-200' },
   },
   {
     label: 'Pink',
@@ -47,7 +47,7 @@ export const Colors = [
   },
   {
     label: 'Pink light',
-    value: { color: '#fce7f3', className: 'text-pink-100' },
+    value: { color: '#fce7f3', className: 'text-pink-200' },
   },
   {
     label: 'Green',
@@ -55,7 +55,7 @@ export const Colors = [
   },
   {
     label: 'Green light',
-    value: { color: '#d9f99d', className: 'text-lime-100' },
+    value: { color: '#d9f99d', className: 'text-lime-200' },
   },
   {
     label: 'Gray',
@@ -63,7 +63,7 @@ export const Colors = [
   },
   {
     label: 'Gray light',
-    value: { color: '#f9fafb', className: 'text-gray-100' },
+    value: { color: '#f9fafb', className: 'text-gray-200' },
   },
   {
     label: 'White',

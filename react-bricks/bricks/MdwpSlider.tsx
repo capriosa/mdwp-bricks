@@ -2,7 +2,7 @@
 import React from 'react'
 import { types, Repeater } from 'react-bricks/frontend'
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { EffectCube, Pagination } from "swiper";
 // Import Swiper styles
 
 
@@ -11,10 +11,10 @@ const mdwpSlider: types.Brick = () => {
     
 <div className='swiper'>
 <Swiper
-      effect='fade'
+      
       slidesPerView={1}
       speed={400}
-      
+      grabCursor={true}
       
 >
       <div className='swiper-wrapper'>
