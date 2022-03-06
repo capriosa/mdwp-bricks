@@ -120,15 +120,7 @@ Slide.schema = {
       },
     },
     
-    {
-      name: 'paragraphColor',
-      label: 'Paragraph Color',
-      type: types.SideEditPropType.Select,
-      selectOptions: {
-        display: types.OptionsDisplay.Color,
-        options: Colors
-      },
-    },
+    
     {
       name: 'headlineAlignment',
       label: 'Headline Alignment',

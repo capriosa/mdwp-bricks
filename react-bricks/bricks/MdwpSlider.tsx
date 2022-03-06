@@ -15,6 +15,7 @@ const mdwpSlider: types.Brick = () => {
       slidesPerView={1}
       speed={400}
       grabCursor={true}
+      loop={true}
       
 >
       <div className='swiper-wrapper'>
