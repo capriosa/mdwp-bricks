@@ -1,6 +1,6 @@
 import React, { Children } from 'react'
 import { Text, RichText, types } from 'react-bricks/frontend'
-import { Colors, BgColors, ParagraphColors, HeadlineAlignment, ParagraphAlignment } from '../utils/colors'
+import { Colors, BgColors, HeadlineAlignment, ParagraphAlignment } from '../utils/colors'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 
@@ -10,7 +10,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 interface HeroUnitProps {
   color: types.IColor
-  paragraphColor: types.IColor
+ 
   bgColor: types.IColor
   headlineAlignment?:  'left' | 'center' | 'right'
   paragraphAlignment?:  'left' | 'center' | 'right'
@@ -24,7 +24,7 @@ interface HeroUnitProps {
 // Component to be rendered
 //=============================
 const Slide: types.Brick<HeroUnitProps> = ({ 
-  background, color, bgColor, paragraphColor, headlineAlignment, paragraphAlignment,fullHeight, ...rest }) => {
+  background, color, bgColor, headlineAlignment, paragraphAlignment,fullHeight, ...rest }) => {
   
   return (
      
@@ -56,7 +56,7 @@ const Slide: types.Brick<HeroUnitProps> = ({
         />
         <RichText
           renderBlock={(props) => (
-            <p className={`mx-auto mt-5 ${paragraphColor?.className} 
+            <p className={`mx-auto mt-5 ${color?.className} 
             text-${paragraphAlignment} 
             
             md:mt-12 md:max-w-lg lg:text-lg`}>
@@ -79,13 +79,7 @@ const Slide: types.Brick<HeroUnitProps> = ({
           )}
         />
         </div>
-        <div className="flex flex-col items-center mb-12 -mt-12 text-center">
-                <span className="relative inline-flex w-full md:w-auto">
-                    <a href="#_" type="button" className="inline-flex hover:bg-orange items-center justify-center w-full px-8 py-4 text-base font-bold leading-6 text-gray bg-orange border border-transparent rounded-full md:w-auto focus:outline-none focus:ring-2 focus:ring-offset-2">
-                        More Info
-                    </a>
-                    </span>
-            </div>
+        
         </div>
       
      </section> 
@@ -102,8 +96,7 @@ Slide.schema = {
   hideFromAddMenu: true,
   getDefaultProps: () => ({
     Color: { color: '#000000', className: 'text-black' },
-    ParagraphColor: { color: '#ffffff', className: 'text-white' },
-    Background: {className: 'br-gray'},
+    Background: {className: 'bg-gray-600'},
     BgColor: { color: '#ffffff', className: 'bg-white' },
     HeadlineAlignment: { className: 'text-center' },
     ParagraphAlignment: { className: 'text-center' },
@@ -126,22 +119,14 @@ Slide.schema = {
         options: Colors
       },
     },
-    {
-      name: 'bgColor',
-      label: 'Headline Background Color',
-      type: types.SideEditPropType.Select,
-      selectOptions: {
-        display: types.OptionsDisplay.Color,
-        options: BgColors
-      },
-    },
+    
     {
       name: 'paragraphColor',
       label: 'Paragraph Color',
       type: types.SideEditPropType.Select,
       selectOptions: {
         display: types.OptionsDisplay.Color,
-        options: ParagraphColors
+        options: Colors
       },
     },
     {

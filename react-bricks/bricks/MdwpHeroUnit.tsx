@@ -1,6 +1,6 @@
 import React, { Children } from 'react'
 import { Text, RichText, types } from 'react-bricks/frontend'
-import { Colors, BgColors, ParagraphColors, HeadlineAlignment, ParagraphAlignment } from '../utils/colors'
+import { Colors, BgColors, HeadlineAlignment, ParagraphAlignment } from '../utils/colors'
 
 //=============================
 // Local Types
@@ -8,7 +8,6 @@ import { Colors, BgColors, ParagraphColors, HeadlineAlignment, ParagraphAlignmen
 
 interface HeroUnitProps {
   color: types.IColor
-  paragraphColor: types.IColor
   bgColor: types.IColor
   headlineAlignment?:  'left' | 'center' | 'right'
   paragraphAlignment?:  'left' | 'center' | 'right'
@@ -21,7 +20,7 @@ interface HeroUnitProps {
 //=============================
 // Component to be rendered
 //=============================
-const MdwpBgHeroUnit: types.Brick<HeroUnitProps> = ({ background, color, bgColor, paragraphColor, headlineAlignment, paragraphAlignment,fullHeight }) => {
+const MdwpBgHeroUnit: types.Brick<HeroUnitProps> = ({ background, color, bgColor, headlineAlignment, paragraphAlignment,fullHeight }) => {
   return (
      
     <section 
@@ -52,7 +51,7 @@ const MdwpBgHeroUnit: types.Brick<HeroUnitProps> = ({ background, color, bgColor
         />
         <RichText
           renderBlock={(props) => (
-            <p className={`mx-auto mt-5 ${paragraphColor?.className} 
+            <p className={`mx-auto mt-5 ${color?.className} 
             text-${paragraphAlignment} 
             
             md:mt-12 md:max-w-lg lg:text-lg`}>
@@ -136,7 +135,7 @@ MdwpBgHeroUnit.schema = {
       type: types.SideEditPropType.Select,
       selectOptions: {
         display: types.OptionsDisplay.Color,
-        options: ParagraphColors
+        options: Colors
       },
     },
     {

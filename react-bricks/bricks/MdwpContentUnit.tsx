@@ -1,6 +1,6 @@
 import React, { Children } from 'react'
 import { Text, RichText, types } from 'react-bricks/frontend'
-import { Colors, BgColors, ParagraphColors, HeadlineAlignment, ParagraphAlignment } from '../utils/colors'
+import { Colors, BgColors, HeadlineAlignment, ParagraphAlignment } from '../utils/colors'
 
 //=============================
 // Local Types
@@ -21,7 +21,7 @@ interface ContentUnitProps {
 //=============================
 // Component to be rendered
 //=============================
-const MdwpContentUnit: types.Brick<ContentUnitProps> = ({ background, color, bgColor, paragraphColor, headlineAlignment, paragraphAlignment,fullHeight }) => {
+const MdwpContentUnit: types.Brick<ContentUnitProps> = ({ background, color, bgColor, headlineAlignment, paragraphAlignment,fullHeight }) => {
   return (
      
 
@@ -110,7 +110,7 @@ MdwpContentUnit.schema = {
       type: types.SideEditPropType.Select,
       selectOptions: {
         display: types.OptionsDisplay.Color,
-        options: ParagraphColors
+        options: Colors
       },
     },
     {
