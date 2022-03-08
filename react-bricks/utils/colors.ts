@@ -35,7 +35,7 @@ export const Colors = [
   },
   {
     label: 'Blue',
-    value: { color: '#0ea5e9', className: 'text-sky-500' },
+    value: { color: '#0ea5e9', className: 'text-sky-600' },
   },
   {
     label: 'Blue light',
@@ -85,7 +85,7 @@ export const BgColors = [
   },
   {
     label: 'Blue light',
-    value: { color: '#e0f2fe', className: 'bg-sky-100' },
+    value: { color: '#e0f2fe', className: 'bg-sky-200' },
   },
   {
     label: 'Pink',
@@ -93,7 +93,7 @@ export const BgColors = [
   },
   {
     label: 'Pink light',
-    value: { color: '#fce7f3', className: 'bg-pink-100' },
+    value: { color: '#fce7f3', className: 'bg-pink-200' },
   },
   {
     label: 'Green',
@@ -101,7 +101,7 @@ export const BgColors = [
   },
   {
     label: 'Green light',
-    value: { color: '#d9f99d', className: 'bg-lime-100' },
+    value: { color: '#d9f99d', className: 'bg-lime-200' },
   },
   {
     label: 'Gray',
@@ -109,7 +109,7 @@ export const BgColors = [
   },
   {
     label: 'Gray light',
-    value: { color: '#f9fafb', className: 'bg-gray-100' },
+    value: { color: '#f9fafb', className: 'bg-gray-200' },
   },
   {
     label: 'White',

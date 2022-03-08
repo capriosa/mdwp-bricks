@@ -44,11 +44,11 @@ const MdwpPopup: types.Brick<HeroUnitProps> = ({ padding }) => {
           propName="title"
         />
         { popup && 
-        <div>
+        <div className='mt-6 p-6 border-2 rounded border-blue-600 bg-pink-100 bg-opacity-50'>
         <RichText
           
           renderBlock={(props) => (
-            <p className="text-xl text-center leading-relaxed text-gray-700 dark:text-gray-100">
+            <p className= "text-xl text-center leading-relaxed text-gray-700 dark:text-gray-100">
               {props.children}
             </p>
           )}
@@ -70,7 +70,8 @@ const MdwpPopup: types.Brick<HeroUnitProps> = ({ padding }) => {
         </div>
           }
       </div>
-      <div onClick={() => setPopup(!popup)} className="p-4 text-white text-center w-64 mt-12 mx-auto rounded bg-blue-600">Open Popup</div>
+      <div onClick={() => setPopup(!popup)} className="cursor-pointer p-4 text-white text-center w-64 mt-12 mx-auto rounded bg-blue-600">
+        { popup ? "Close Popup" : "Open Popup"}</div>
     </div>
   )
 }

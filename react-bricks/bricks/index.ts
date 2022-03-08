@@ -11,9 +11,11 @@ import Website from 'react-bricks-ui/website'
 import MyHeroUnit from './MyHeroUnit'
 import MdwpHeroUnit from './MdwpHeroUnit'
 import MdwpContentUnit from './MdwpContentUnit'
-import MdwpSlide from './MdwpSlide'
+import Slide from './MdwpSlide'
 import MdwpSlider from './MdwpSlider'
 import MdwpPopup from './MdwpPopup'
+import Tab from './MdwpTab'
+import MdwpTabs from './MdwpTabs'
 
 const bricks: types.Brick<any>[] = [
   ...Website,
@@ -21,9 +23,11 @@ const bricks: types.Brick<any>[] = [
   MyHeroUnit,
   MdwpHeroUnit,
   MdwpContentUnit,
-  MdwpSlide,
+  Slide,
   MdwpSlider,
-  MdwpPopup
+  MdwpPopup,
+  MdwpTabs,
+  Tab
   // Put here your other bricks...
 ]
 

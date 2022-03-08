@@ -27,7 +27,9 @@ const MdwpBgHeroUnit: types.Brick<HeroUnitProps> = ({ background, color, bgColor
     style={{backgroundImage: `url(${background?.src})`}} 
     
     className={`w-full flex items-center px-6 pb-12 antialiased bg-cover  
-    
+    ${
+      bgColor?.className
+    }
     ${
       fullHeight ? 'min-h-screen' : ''
     }`}>
@@ -38,9 +40,7 @@ const MdwpBgHeroUnit: types.Brick<HeroUnitProps> = ({ background, color, bgColor
         <Text
           renderBlock={(props) => (
             <h1 className={`text-5xl font-extrabold p-2 leading-10 tracking-tight text-${headlineAlignment} 
-            ${
-              bgColor?.className
-            } sm:leading-none md:text-6xl lg:text-7xl
+             sm:leading-none md:text-6xl lg:text-7xl
             ${color?.className}
             `}>
               {props.children}
