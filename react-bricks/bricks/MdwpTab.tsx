@@ -8,10 +8,11 @@ interface Props {
 
 const Tab: types.Brick<Props> = (...rest) => {
   const [tab, showTab ] = useState(false)
+  
   return (
     <>
     
-    <div className='p-12 flex' {...rest}>
+    <div className='p-12 flex' {...rest} >
       <div onClick={() => showTab(!tab)}>Tab</div>
       </div>
       {tab ?

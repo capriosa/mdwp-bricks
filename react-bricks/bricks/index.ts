@@ -16,6 +16,7 @@ import MdwpSlider from './MdwpSlider'
 import MdwpPopup from './MdwpPopup'
 import Tab from './MdwpTab'
 import MdwpTabs from './MdwpTabs'
+import MdwpTextImage from './MdwpTextImage/MdwpTextImage'
 
 const bricks: types.Brick<any>[] = [
   ...Website,
@@ -27,7 +28,9 @@ const bricks: types.Brick<any>[] = [
   MdwpSlider,
   MdwpPopup,
   MdwpTabs,
-  Tab
+  Tab,
+  MdwpTextImage
+  
   // Put here your other bricks...
 ]
 
