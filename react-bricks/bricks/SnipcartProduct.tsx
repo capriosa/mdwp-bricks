@@ -1,4 +1,3 @@
-import { imageOptimizer } from 'next/dist/server/image-optimizer'
 import React from 'react'
 import { Text, RichText, Image, File, Repeater, types } from 'react-bricks/frontend'
 
@@ -10,27 +9,29 @@ interface Props {
   description: string
 }
 
-const SnipcartProduct: types.Brick<Props> = ({image, id, price, description, name}) => {
+const SnipcartProduct: types.Brick<Props> = ({image, id, price, description, name, ...rest}) => {
   return (
-    <section className="w-full flex items-center px-6 pb-12 antialiased">
-    <div className={`mx-auto max-w-7xl `}>
-    <div className="container max-w-lg px-4 py-32 mx-auto md:max-w-none">
+    
+    <div className="w-1/5 px-4 py-6 bg-white rounded-xl mr-6 mt-6" {...rest}>
       <Image
         propName="image"
         alt="altText"
-        imageClassName="w-64 h-64 lg:w-64 lg:h-64"
+        imageClassName="w-80 mb-4"
         
       />
       <p>{name}</p>
       <p>{price} {price && <span>€</span>}</p>
       <p className='mb-12'>{description}</p>
+      <div className="max-w-1/4">
       <RichText
         propName="long-description"
         placeholder="Type a long product description..."
-        renderBlock={({ children }) => (<span>{children}</span>)}
+        renderBlock={({ children }) => (<div className='max-w-1/4'>{children}</div>)}
         allowedFeatures={[types.RichTextFeatures.Bold]}
+        
       />
-      <button className="snipcart-add-item rounded  mt-12 bg-blue-500 px-4 py-2 w-64 text-white"
+      </div>
+      <button className="snipcart-add-item w-80 rounded  mt-12 bg-blue-500 px-4 py-2 text-white"
         data-item-id={id}
         data-item-price={price}
         data-item-url="/products"
@@ -40,15 +41,14 @@ const SnipcartProduct: types.Brick<Props> = ({image, id, price, description, nam
           Add to cart
       </button>
     </div>
-    </div>
-    </section>
+    
   )
 }
 
 SnipcartProduct.schema = {
-  name: 'SnipcartProduct',
-  label: 'Snipcart Product Attributes',
-
+  name: 'snipcartproduct',
+  label: 'Snipcart Product',
+  hideFromAddMenu: true,
   sideEditProps: [
     {
       name: 'image',
