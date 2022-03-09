@@ -27,7 +27,7 @@ const Home: React.FC<HomeProps> = ({ page, error }) => {
           <Head>
             <title>{page.meta.title}</title>
             <meta name="description" content={page.meta.description} />
-            <link rel="stylesheet" href="<https://cdn.snipcart.com/themes/v3.2.0/default/snipcart.css>"/>
+            
           </Head>  
           <PageViewer page={pageOk} />
         </>
