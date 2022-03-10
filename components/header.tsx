@@ -10,19 +10,15 @@ const Header: React.FC = () => (
             <img src="/react-bricks-logo.svg" className="w-48" alt="React Bricks" />
           </a>
           <div className="sm:ml-8 flex space-x-5 text-center">
-            <Link href="/blog/list">
-              <a className="text-gray-500 hover:text-pink-700">Post List</a>
+            <Link href="/about-us" prefetch={true}>
+              <a className="text-gray-500 hover:text-pink-700">About us</a>
             </Link>
-            <Link href="/blog/thumbnails">
-              <a className="text-gray-500 hover:text-pink-700">Post Thumbnails</a>
+            <Link href="/products">
+              <a className="text-gray-500 hover:text-pink-700">Snipcart Demo</a>
             </Link>
           </div>
         </div>
-        <Link href="/admin" prefetch={false}>
-          <a className="py-2 px-5 rounded text-white font-medium bg-cyan-500 hover:bg-cyan-600 hover:shadow-lg transition duration-200">
-            Edit content
-          </a>
-        </Link>
+        
       </div>
     </div>
   </header>
