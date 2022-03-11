@@ -39,11 +39,14 @@ const MdwpBgHeroUnit: types.Brick<HeroUnitProps> = ({ background, color, bgColor
     <div className="container max-w-lg px-4 py-32 mx-auto md:max-w-none md:text-center">
         <Text
           renderBlock={(props) => (
-            <h1 className={`text-5xl font-extrabold p-2 leading-10 tracking-tight text-${headlineAlignment} 
+            <h1 className={`text-5xl font-extrabold p-2 leading-normal tracking-tight text-${headlineAlignment} 
              sm:leading-none md:text-6xl lg:text-7xl
             ${color?.className}
+            
             `}>
+              <mark className={` ${bgColor?.className}`}>
               {props.children}
+              </mark>
             </h1>
           )}
           placeholder="Type a title..."

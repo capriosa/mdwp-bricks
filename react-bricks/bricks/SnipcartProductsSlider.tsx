@@ -3,6 +3,7 @@ import React from 'react'
 import { types, Repeater } from 'react-bricks/frontend'
 import { Swiper } from 'swiper/react'
 
+
 interface Props {
   sliderview: boolean
 }
@@ -10,6 +11,7 @@ interface Props {
 const SnipcartProductsSlider: types.Brick<Props> = ({sliderview}) => {
   return (
     
+
 sliderview ?    
 <div className='swiper-container  h-screen max-w-screen-lg'>
   <div className='swiper'>
@@ -17,7 +19,8 @@ sliderview ?
       slidesPerView={4}
       speed={400}
       grabCursor={true}
-      effect= "fade"
+      
+     
   >
       <div className='swiper-wrapper mx-auto'> 
        
@@ -37,6 +40,8 @@ sliderview ?
         />
       </div>
 </div>
+
+
 
 )
 }

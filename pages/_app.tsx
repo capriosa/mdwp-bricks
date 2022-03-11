@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { ReactBricks } from 'react-bricks/frontend'
 import type { AppProps } from 'next/app'
 import config from '../react-bricks/config'
+import Footer from '../components/footer'
+import Header from '../components/header'
 
 import '../css/styles.css'
 
@@ -27,7 +29,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
 
   return (
     <ReactBricks {...reactBricksConfig}>
+      <Header/>
       <Component {...pageProps} />
+      <Footer/>
     </ReactBricks>
   )
 }
