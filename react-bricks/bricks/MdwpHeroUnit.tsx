@@ -44,9 +44,9 @@ const MdwpBgHeroUnit: types.Brick<HeroUnitProps> = ({ background, color, bgColor
             ${color?.className}
             
             `}>
-              <mark className={` ${bgColor?.className}`}>
+              
               {props.children}
-              </mark>
+             
             </h1>
           )}
           placeholder="Type a title..."

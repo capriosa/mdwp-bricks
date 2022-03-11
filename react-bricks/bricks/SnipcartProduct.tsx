@@ -12,7 +12,7 @@ interface Props {
 const SnipcartProduct: types.Brick<Props> = ({image, id, price, description, name, ...rest}) => {
   return (
     
-    <div className="swiper-slide w-64 px-4 py-6 bg-white rounded-xl  mt-6" {...rest}>
+    <div className="swiper-slide w-64 px-4 py-6 bg-white rounded-xl mt-6" {...rest}>
       <Image
         propName="image"
         alt={name}
@@ -23,7 +23,7 @@ const SnipcartProduct: types.Brick<Props> = ({image, id, price, description, nam
       <p className='text-lime-700'>{price} {price && <span>€</span>}</p>
       <p>{description}</p>
       
-      <button className="snipcart-add-item w-64 rounded  mt-12 bg-blue-500 px-4 py-2 text-white"
+      <button className="snipcart-add-item w-full rounded  mt-12 bg-blue-500 py-2 text-white"
         data-item-id={id}
         data-item-price={price}
         data-item-url="/products"

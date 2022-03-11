@@ -13,7 +13,7 @@ const SnipcartProductsSlider: types.Brick<Props> = ({sliderview}) => {
     
 
 sliderview ?    
-<div className='swiper-container  h-screen max-w-screen-lg'>
+<div className='swiper-container  max-w-screen-lg'>
   <div className='swiper'>
   <Swiper
       slidesPerView={4}
