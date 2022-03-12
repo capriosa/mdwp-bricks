@@ -16,6 +16,9 @@ const Header: React.FC = () => (
             <Link href="/products">
               <a className="text-gray-200 hover:text-lime-600">Snipcart Demo</a>
             </Link>
+            <Link href="/algolia">
+              <a className="text-gray-200 hover:text-lime-600">Algolia/Snipcart Demo</a>
+            </Link>
           </div>
         </div>
         

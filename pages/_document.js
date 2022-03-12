@@ -12,6 +12,9 @@ export default function Document() {
               rel="stylesheet"
               href="https://unpkg.com/swiper@6/swiper.min.css"
             />
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossOrigin="anonymous"/>
+
+
             <link rel="preconnect" href="<https://app.snipcart.com>"/>
             <link rel="preconnect" href="<https://cdn.snipcart.com>"/>
             <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.3/default/snipcart.css" />
