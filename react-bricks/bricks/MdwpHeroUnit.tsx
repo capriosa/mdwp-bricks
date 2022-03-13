@@ -26,10 +26,8 @@ const MdwpBgHeroUnit: types.Brick<HeroUnitProps> = ({ background, color, bgColor
     <section 
     style={{backgroundImage: `url(${background?.src})`}} 
     
-    className={`w-full flex items-center px-6 pb-12 antialiased bg-cover  filter brightness-150
-    ${
-      bgColor?.className
-    }
+    className={`w-full flex items-center px-6 pb-12 antialiased bg-cover  filter backdrop-brightness-0
+    
     ${
       fullHeight ? 'min-h-screen' : ''
     }`}>

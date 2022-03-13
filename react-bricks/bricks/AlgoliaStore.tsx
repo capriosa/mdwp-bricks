@@ -22,19 +22,27 @@ interface Props {
 
 
 const AlgoliaStore: types.Brick<Props> = () => {
-  const searchClient = algoliasearch('B1G2GM9NG0', 'aadef574be1f9252bb48d4ea09b5cfe5');
+  const searchClient = algoliasearch('latency', '6be0576ff61c053d5f9a3225e2a90f76');
   return (
     
 
 
- <div className='max-w-screen-lg mx-auto'>
+ <div className='w- mx-auto'>
    <div className="ais-InstantSearch">
         
-        <InstantSearch indexName="demo_ecommerce" searchClient={searchClient}>
+        <InstantSearch indexName="instant_search" searchClient={searchClient}>
           <div className="left-panel mt-6">
             <ClearRefinements />
-            <h2 className='mt-6'>Brands</h2>
-            <RefinementList attribute="brand" />
+            <div className='flex'>
+              <h2 className='my-6 mr-32 w-32'>Brands</h2>
+              <h2 className='my-6'>Categories</h2>
+            </div>
+            <div className='flex'>
+            
+            <RefinementList className="mr-32 w-32" attribute="brand" />
+            
+            <RefinementList attribute="categories" />
+            </div>
             <Configure hitsPerPage={8} />
           </div>
           <div className="mt-12">
