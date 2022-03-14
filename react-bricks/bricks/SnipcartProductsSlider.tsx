@@ -48,24 +48,7 @@ sliderview ?
  </div>
  :
  <div className='max-w-screen-lg mx-auto'>
-   <div className="ais-InstantSearch">
-        <h1>React InstantSearch e-commerce demo</h1>
-        <InstantSearch indexName="demo_ecommerce" searchClient={searchClient}>
-          <div className="left-panel">
-            <ClearRefinements />
-            <h2>Brands</h2>
-            <RefinementList attribute="brand" />
-            <Configure hitsPerPage={8} />
-          </div>
-          <div className="">
-            <SearchBox />
-            <Hits hitComponent={Hit} />
-            <div className='flex justify-between text-base space-x-4 > *'>
-            <Pagination />
-            </div>
-          </div>
-        </InstantSearch>
-      </div>
+   
       <div className='flex flex-wrap'>
         <Repeater 
         propName="products" 

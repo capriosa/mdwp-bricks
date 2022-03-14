@@ -62,7 +62,13 @@ const AlgoliaStore: types.Brick<Props> = () => {
                 />
               </Panel>
               <Panel className="mt-6" header="Brands">
-              <RefinementList className="" attribute="brand" />
+                <RefinementList
+                  attribute="brand"
+                  searchable={true}
+                  translations={{
+                    placeholder: 'Search for brands…',
+                  }}
+                />
               </Panel>
               <Panel header="Free shipping">
                 <ToggleRefinement
