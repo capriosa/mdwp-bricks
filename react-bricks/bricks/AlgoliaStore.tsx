@@ -64,12 +64,55 @@ const AlgoliaStore: types.Brick<Props> = () => {
               <Panel className="mt-6" header="Brands">
               <RefinementList className="" attribute="brand" />
               </Panel>
-              
-              
-              <Configure hitsPerPage={8} />
+              <Panel header="Free shipping">
+                <ToggleRefinement
+                  attribute="free_shipping"
+                  label="Display only items with free shipping"
+                  value={true}
+                />
+              </Panel>
+
             </div>
             
             <div className='col-start-4 col-end-12'>
+            <header className="flex mb-2 container-header container-options">
+            <SortBy
+              className="container-option mr-2 "
+              defaultRefinement="instant_search"
+              items={[
+                {
+                  label: 'Sort by featured',
+                  value: 'instant_search',
+                },
+                {
+                  label: 'Price ascending',
+                  value: 'instant_search_price_asc',
+                },
+                {
+                  label: 'Price descending',
+                  value: 'instant_search_price_desc',
+                },
+              ]}
+            />
+            <HitsPerPage
+              className="container-option"
+              items={[
+                {
+                  label: '16 hits per page',
+                  value: 16,
+                },
+                {
+                  label: '32 hits per page',
+                  value: 32,
+                },
+                {
+                  label: '64 hits per page',
+                  value: 64,
+                },
+              ]}
+              defaultRefinement={16}
+            />
+            </header>
             <Hits hitComponent={Hit} />
             <Pagination className="mt-4 mb-32"/>
             </div>
@@ -93,18 +136,18 @@ AlgoliaStore.schema = {
 function Hit(props) {
   return (
     <>
-    <div className='flex flex-auto flex-grow justify-between mt-12'>
-      <div className='w-64 flex justify-between'>
-      <img className="h-28 mr-24" src={props.hit.image}  alt={props.hit.name} />
+    <div className='flex flex-auto flex-grow space-x-4'>
+      <div className='w-64'>
+      <img className="h-24" src={props.hit.image}  alt={props.hit.name} />
       </div>
-      <div className="pl-12 w-1/4">
+      <div className="w-1/4">
         <Highlight attribute="name" hit={props.hit} />
       </div>
       <div className="w-3/4">
         <Highlight attribute="description" hit={props.hit} />
       </div>
-      <div className="hit-price text-lime-800">${props.hit.price}
-      <button className="snipcart-add-item rounded  w-64 my-12 bg-blue-500 py-2 text-white"
+      <div className="hit-price text-lime-800 font-bold">${props.hit.price}
+      <button className="snipcart-add-item rounded  w-40 mt-24 bg-blue-500 py-2 text-white"
         data-item-id={props.hit.name}
         data-item-price={props.hit.price}
         data-item-url="/algolia"
