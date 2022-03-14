@@ -95,7 +95,7 @@ const AlgoliaStore: types.Brick<Props> = () => {
               ]}
             />
             <HitsPerPage
-              className="container-option"
+              className="container-option mr-2"
               items={[
                 {
                   label: '16 hits per page',
@@ -112,6 +112,7 @@ const AlgoliaStore: types.Brick<Props> = () => {
               ]}
               defaultRefinement={16}
             />
+            <Pagination className="text-xl"/>
             </header>
             <Hits hitComponent={Hit} />
             <Pagination className="mt-4 mb-32"/>
@@ -155,9 +156,12 @@ function Hit(props) {
         data-item-name={props.hit.name}>
           Add to cart
       </button></div>
-    </div></>
-  );
+    </div>
+    </>
+    )
 }
+  
+
 
 Hit.propTypes = {
   hit: PropTypes.object.isRequired,
