@@ -5,14 +5,27 @@ import { types, Repeater } from 'react-bricks/frontend'
 import algoliasearch from 'algoliasearch/lite';
 import {
   InstantSearch,
-  Hits,
-  SearchBox,
-  Pagination,
-  Highlight,
-  ClearRefinements,
+  HierarchicalMenu,
   RefinementList,
+  SortBy,
+  Pagination,
+  ClearRefinements,
+  Highlight,
+  Hits,
+  HitsPerPage,
+  Panel,
   Configure,
+  SearchBox,
+  Snippet,
+  ToggleRefinement,
 } from 'react-instantsearch-dom';
+import {
+  ClearFiltersMobile,
+  NoResults,
+  Ratings,
+  ResultsNumberMobile,
+  SaveFiltersMobile,
+} from '../../widgets';
 import PropTypes from 'prop-types';
 
 
@@ -37,11 +50,22 @@ const AlgoliaStore: types.Brick<Props> = () => {
         <div className=' grid grid-cols-auto'>
             
             <div className='col-start-1 col-end-3 mr-4'>
+            <ResultsNumberMobile /><br/>
               <ClearRefinements />
-              <h2 className='my-6'>Brands</h2>
+              
+              <Panel className="mt-6" header="Categories">
+                <HierarchicalMenu
+                  attributes={[
+                    'hierarchicalCategories.lvl0',
+                    'hierarchicalCategories.lvl1',
+                  ]}
+                />
+              </Panel>
+              <Panel className="mt-6" header="Brands">
               <RefinementList className="" attribute="brand" />
-              <h2 className='my-6'>Categories</h2>
-              <RefinementList attribute="categories" isExpandable={true}/>
+              </Panel>
+              
+              
               <Configure hitsPerPage={8} />
             </div>
             
