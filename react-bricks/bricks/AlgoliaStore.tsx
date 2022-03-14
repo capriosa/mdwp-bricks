@@ -27,37 +27,35 @@ const AlgoliaStore: types.Brick<Props> = () => {
     
 
 
- <div className='w- mx-auto'>
+ <div className='max-w-screen-xl mx-auto'>
    <div className="ais-InstantSearch">
-        
+    
         <InstantSearch indexName="instant_search" searchClient={searchClient}>
-          <div className="left-panel mt-6">
-            <ClearRefinements />
-            <div className='flex'>
-              <h2 className='my-6 mr-32 w-32'>Brands</h2>
-              <h2 className='my-6'>Categories</h2>
-            </div>
-            <div className='flex'>
-            
-            <RefinementList className="mr-32 w-32" attribute="brand" />
-            
-            <RefinementList attribute="categories" />
-            </div>
-            <Configure hitsPerPage={8} />
-          </div>
-          <div className="mt-12">
-            <p>
+        <div className='py-6'>
             <SearchBox />
-            </p>
-            <div className='mt-12'>
-            <Hits hitComponent={Hit} />
+        </div>
+        <div className=' grid grid-cols-auto'>
+            
+            <div className='col-start-1 col-end-3 mr-4'>
+              <ClearRefinements />
+              <h2 className='my-6'>Brands</h2>
+              <RefinementList className="" attribute="brand" />
+              <h2 className='my-6'>Categories</h2>
+              <RefinementList attribute="categories" isExpandable={true}/>
+              <Configure hitsPerPage={8} />
             </div>
-            <Pagination />
-           
-          </div>
-        </InstantSearch>
-      </div>
-      
+            
+            <div className='col-start-4 col-end-12'>
+            <Hits hitComponent={Hit} />
+            <Pagination className="mt-4 mb-32"/>
+            </div>
+            
+          
+        </div>
+        
+        
+      </InstantSearch> 
+   </div>   
 </div>
 
 )
@@ -72,14 +70,16 @@ function Hit(props) {
   return (
     <>
     <div className='flex flex-auto flex-grow justify-between mt-12'>
-      <img className="h-28 mr-12" src={props.hit.image}  alt={props.hit.name} />
-      <div className="mr-12 w-1/4">
+      <div className='w-64 flex justify-between'>
+      <img className="h-28 mr-24" src={props.hit.image}  alt={props.hit.name} />
+      </div>
+      <div className="pl-12 w-1/4">
         <Highlight attribute="name" hit={props.hit} />
       </div>
-      <div className="mr-12 w-3/4">
+      <div className="w-3/4">
         <Highlight attribute="description" hit={props.hit} />
       </div>
-      <div className="hit-price">${props.hit.price}
+      <div className="hit-price text-lime-800">${props.hit.price}
       <button className="snipcart-add-item rounded  w-64 my-12 bg-blue-500 py-2 text-white"
         data-item-id={props.hit.name}
         data-item-price={props.hit.price}
