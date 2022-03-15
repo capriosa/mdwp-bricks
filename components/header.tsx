@@ -9,7 +9,7 @@ const Header: React.FC = () => (
           <a href="/">
             <img src="/mdwp-logo.jpeg" className="rounded h-12" alt="mdwp Bricks" />
           </a>
-          <div className="sm:ml-8 flex space-x-5 text-center">
+          <div id="search" className="sm:ml-8 flex space-x-5 text-center">
             <Link href="/about-us">
               <a className="text-gray-200 hover:text-lime-600">About us</a>
             </Link>

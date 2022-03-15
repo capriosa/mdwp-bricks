@@ -152,8 +152,9 @@ function Hit(props) {
       </div>
       <div className="w-3/4">
         <Highlight attribute="description" hit={props.hit} />
+        
       </div>
-      <div className="hit-price text-lime-800 font-bold">${props.hit.price}
+      <div className="hit-price text-lime-800 tex-lg">${props.hit.price}
       <button className="snipcart-add-item rounded  w-40 mt-24 bg-blue-500 py-2 text-white"
         data-item-id={props.hit.name}
         data-item-price={props.hit.price}
