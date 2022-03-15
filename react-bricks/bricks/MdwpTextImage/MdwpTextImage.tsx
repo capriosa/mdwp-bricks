@@ -65,7 +65,7 @@ const MdwpTextImage: types.Brick<TextImageProps> = ({
           // }
         >
           <Repeater
-            propName="badge"
+            propName="faq"
             renderWrapper={items => (
               <div
                 className={classNames('mb-4 flex', {
