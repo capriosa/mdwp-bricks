@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*.snipcart {
+  background-color: rgba(50,50,50,0.7);
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  z-index: 1000;
+}
+
+.snipcart:empty {
+  background-color: transparent;
+  z-index: 0;
+  position:static
+}*/
+
+.snipcart-modal__container {
+  width: 45%;
+  height: 100%;
+  left: auto;
+  right: 0;
+}

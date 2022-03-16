@@ -28,7 +28,7 @@ const TeaserCard: types.Brick<Props> = ({image, tag, price, description, name, .
                 <p className="pt-2 text-xs font-medium"><span className="snipcart-add-item underline"
                   data-item-id={name}
                   data-item-price={price}
-                  data-item-url="/products"
+                  data-item-url="/teasergrid"
                   data-item-image={image?.src}
                   data-item-description={description}
                   data-item-name={name}>
