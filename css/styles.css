@@ -2,19 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/*.snipcart {
-  background-color: rgba(50,50,50,0.7);
+.snipcart {
+  background-color: rgba(50,50,75,0.7);
   width: 100%;
-  min-height: 100vh;
+  min-height: 2000px;
   position: absolute;
   z-index: 1000;
+}
+
+.snipcart-cart-summary__overlay {
+  background-color: rgba(50,50,75,0.7);
 }
 
 .snipcart:empty {
   background-color: transparent;
   z-index: 0;
-  position:static
-}*/
+  display: none;
+  
+}
 
 .snipcart-modal__container {
   width: 45%;
@@ -22,3 +27,14 @@
   left: auto;
   right: 0;
 }
+
+.snipcart-layout--large {
+  width: 100% !important;
+}
+
+.snipcart-button-primary {
+  background-color: cornflowerblue;
+  box-shadow: cornflowerblue,0 10px 4px -8px rgba(0,0,0,.5);
+}
+
+
