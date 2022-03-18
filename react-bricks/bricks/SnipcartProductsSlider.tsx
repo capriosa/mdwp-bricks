@@ -4,19 +4,9 @@ import { types, Repeater } from 'react-bricks/frontend'
 import { Swiper } from 'swiper/react'
 import algoliasearch from 'algoliasearch/lite';
 import {
-  InstantSearch,
-  Hits,
-  SearchBox,
-  Pagination,
   Highlight,
-  ClearRefinements,
-  RefinementList,
-  Configure,
 } from 'react-instantsearch-dom';
 import PropTypes from 'prop-types';
-
-
-
 interface Props {
   sliderview: boolean
 }
@@ -33,30 +23,23 @@ sliderview ?
       slidesPerView={4}
       speed={400}
       grabCursor={true}
-      
-     
   >
       <div className='swiper-wrapper mx-auto'> 
-      
-        <Repeater 
+      <Repeater 
         propName="products" 
-        />
-        
-  </div> 
+      />
+      </div> 
   </Swiper>  
   </div>
  </div>
  :
  <div className='max-w-screen-lg mx-auto'>
-   
-      <div className='flex flex-wrap'>
+    <div className='flex flex-wrap'>
         <Repeater 
         propName="products" 
         />
       </div>
 </div>
-
-
 
 )
 }

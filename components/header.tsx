@@ -13,6 +13,9 @@ const Header: React.FC = () => (
             <Link href="/about-us">
               <a className="text-gray-200 hover:text-lime-600">About us</a>
             </Link>
+            <Link href="/bricks">
+              <a className="text-gray-200 hover:text-lime-600">Bricks</a>
+            </Link>
             <Link href="/products">
               <a className="text-gray-200 hover:text-lime-600">Snipcart Demo</a>
             </Link>
