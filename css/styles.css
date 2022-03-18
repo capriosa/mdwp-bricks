@@ -37,4 +37,17 @@
   box-shadow: cornflowerblue,0 10px 4px -8px rgba(0,0,0,.5);
 }
 
+.accordion .panel {
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.accordion input:checked~.panel {
+  height: auto;
+  color: #333;
+  padding: 20px;
+  transition: all 0.5s;
+}
+
 

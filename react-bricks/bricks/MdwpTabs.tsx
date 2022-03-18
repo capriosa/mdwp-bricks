@@ -7,11 +7,15 @@ interface Props {
 
 const MdwpTabs: types.Brick<Props> = (props) => {
   return (
-    
+    <div className="wrap py-12">
+          <div className="accordion w-1/2 mx-auto">          
+             
     <Repeater 
       propName="tabs" 
     
     />
+    </div>
+    </div>
   )
 }
 
