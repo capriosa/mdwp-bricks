@@ -17,6 +17,8 @@ import MdwpPopup from './MdwpPopup'
 import Tab from './MdwpTab'
 import MdwpTabs from './MdwpTabs'
 import MdwpTextImage from './MdwpTextImage/MdwpTextImage'
+import HoricontalTab from './MdwpHoricontalTab'
+import MdwpHoricontalTabs from './MdwpHoricontalTabs'
 import SnipcartProduct from './SnipcartProduct'
 import SnipcartProductsSlider from './SnipcartProductsSlider'
 import AlgoliaStore from './AlgoliaStore'
@@ -37,6 +39,8 @@ const bricks: types.Brick<any>[] = [
   MdwpPopup,
   MdwpTabs,
   Tab,
+  MdwpHoricontalTabs,
+  HoricontalTab,
   MdwpTextImage,
   SnipcartProduct,
   SnipcartProductsSlider,

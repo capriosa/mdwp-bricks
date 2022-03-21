@@ -50,4 +50,12 @@
   transition: all 0.5s;
 }
 
+input[type=radio]:checked ~ label ~ .tab-content {
+  display: block;
+}
+
+input[type=radio]:checked ~ label {
+  font-weight: bold;
+}
+
 
