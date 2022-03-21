@@ -22,6 +22,9 @@ const Header: React.FC = () => (
             <Link href="/algolia">
               <a className="text-gray-200 hover:text-lime-600">Algolia/Snipcart Demo</a>
             </Link>
+            <Link href="/commerce-template">
+              <a className="text-gray-200 hover:text-lime-600">Snipcart Grid</a>
+            </Link>
           </div>
         </div>
         

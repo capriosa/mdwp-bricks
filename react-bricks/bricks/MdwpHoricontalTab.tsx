@@ -39,7 +39,7 @@ const HoricontalTab: types.Brick<Props> = ({horicontaltab, text, ...rest}) => {
             alt="altText"
             maxWidth={200}
             aspectRatio={1}
-            imageClassName="shadow-red-500-50 absolute left-1/2 w-1/2"
+            imageClassName="shadow-2xl shadow-red-500-50 absolute left-1/2 w-1/2"
           />
           </div>
           </Fade>
