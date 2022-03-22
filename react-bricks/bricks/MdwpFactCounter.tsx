@@ -9,20 +9,23 @@ interface Props {
   text: string
 }
 
-let id;
+let id = [];
 
 
 const Fact: types.Brick<Props> = ({count, fact, text, ...rest}) => {
   const [seconds, setSpeed] = useState(0);
   const onShow = (e) => {
     
-   id = setInterval(() => tick(), 250)
+   id.push(setInterval(() => tick(), 225))
    
   }
   
   const onHide = (e) => {
+    
       setSpeed(0)
-      clearInterval(id)
+      id.map((item) =>
+      clearInterval(item))
+      
   }
   
   const tick = () => {

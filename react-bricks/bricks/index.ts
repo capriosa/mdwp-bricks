@@ -28,6 +28,8 @@ import MdwpTeaserHero from './MdwpTeaserHero'
 import TeaserCard from './TeaserCard'
 import MdwpTestimonials from './MdwpTestimonials'
 import MdwpTestimonial  from './MdwpTestimonial'
+import BrickDocument from './Documents/Document'
+import Documents from './Documents/Documents'
 
 
 const bricks: types.Brick<any>[] = [
@@ -52,7 +54,9 @@ const bricks: types.Brick<any>[] = [
   MdwpTestimonials,
   MdwpTestimonial,
   MdwpFactCounterSection,
-  Fact
+  Fact,
+  Documents,
+  BrickDocument
   
   // Put here your other bricks...
 ]
