@@ -11,10 +11,16 @@ export interface DocumentProps {
 }
 
 const BrickDocument: types.Brick<DocumentProps> = ({ color, ...rest }) => {
+  const [numPages, setNumPages] = React.useState(null);
+  const [pageNumber, setPageNumber] = React.useState(1);
+
+  function onDocumentLoadSuccess({ numPages }) {
+    setNumPages(numPages);
+  }
   return (
     <div
       className={classNames(
-        'flex justify-center bg-gray-50 border border-gray-200 rounded items-center py-2',
+        'w-5xl  mx-auto px-6 py-2',
         color?.className
       )}
       {...rest}
@@ -25,15 +31,23 @@ const BrickDocument: types.Brick<DocumentProps> = ({ color, ...rest }) => {
         renderBlock={file => {
           console.log(file.url)
           return file ? (
-            <div className="flex font-semibold h-full items-center">
+            
+            <div className="w-full flex font-semibold h-full">
+              <h1>PDF-Preview</h1>
               <Document
                 file={file.url}
-              />
+                
+              >
+                <Page pageNumber={1} />
+              </Document>
             
           
               <FiFile className="mr-2" />
               {file.name} - {file.size.toFixed(2)}MB
+            
+              
             </div>
+            
           ) : (
             <div className="flex font-semibold h-full items-center">
               <FiFilePlus className="mr-2" />
