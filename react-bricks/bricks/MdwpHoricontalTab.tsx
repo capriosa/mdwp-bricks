@@ -9,12 +9,15 @@ interface Props {
 
 const HoricontalTab: types.Brick<Props> = ({horicontaltab, text, ...rest}) => {
   const [checked, setChecked] = useState(true);
+  const [id, setId] = useState(null);
+  
   
   return (
     <div className="tab text-red-500 w-min mr-6 float-left" {...rest}>
       <input className="hidden" type="radio" name="tab" id={horicontaltab}
         defaultChecked={checked}
         onChange={() => setChecked(!checked)}
+        
       />
       <label className="p-18 cursor-pointer" htmlFor={horicontaltab}>{horicontaltab}</label>
       

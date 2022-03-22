@@ -7,7 +7,7 @@ interface Props {
 
 const MdwpHoricontalTabs: types.Brick<Props> = (props) => {
   return (
-    <div className="max-w-screen-lg h-screen mx-auto py-12 mb-96">
+    <div className="max-w-screen-lg h-screen mx-auto py-2 mb-96">
       <Text
         propName="text"
         placeholder="Type a text..."
