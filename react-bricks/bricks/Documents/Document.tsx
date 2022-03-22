@@ -3,7 +3,8 @@ import React from 'react'
 import { File, types } from 'react-bricks/frontend'
 import { FiFile, FiFilePlus } from 'react-icons/fi'
 import blockNames from '../../utils/blockNames'
-import { Document, Page } from 'react-pdf';
+import { Document, Page, pdfjs } from 'react-pdf';
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 export interface DocumentProps {
   color?: { color: string; className: string }
