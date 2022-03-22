@@ -33,7 +33,9 @@ const BrickDocument: types.Brick<DocumentProps> = ({ color, ...rest }) => {
           return file ? (
             
             <div className="w-full flex font-semibold h-full">
-              <h1>PDF-Preview</h1>
+              <h1 className="mr-4">PDF-Preview</h1>
+              
+              <a href={file.url}>Download</a>
               <Document
                 file={file.url}
                 
@@ -44,7 +46,7 @@ const BrickDocument: types.Brick<DocumentProps> = ({ color, ...rest }) => {
           
               <FiFile className="mr-2" />
               {file.name} - {file.size.toFixed(2)}MB
-            
+              
               
             </div>
             
