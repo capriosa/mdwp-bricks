@@ -16,6 +16,8 @@ import MdwpSlider from './MdwpSlider'
 import MdwpPopup from './MdwpPopup'
 import Tab from './MdwpTab'
 import MdwpTabs from './MdwpTabs'
+import Fact from './MdwpFactCounter'
+import MdwpFactCounterSection from './MdwpFactCounterSection'
 import MdwpTextImage from './MdwpTextImage/MdwpTextImage'
 import HoricontalTab from './MdwpHoricontalTab'
 import MdwpHoricontalTabs from './MdwpHoricontalTabs'
@@ -48,7 +50,9 @@ const bricks: types.Brick<any>[] = [
   MdwpTeaserHero,
   TeaserCard,
   MdwpTestimonials,
-  MdwpTestimonial
+  MdwpTestimonial,
+  MdwpFactCounterSection,
+  Fact
   
   // Put here your other bricks...
 ]
