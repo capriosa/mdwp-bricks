@@ -1,6 +1,7 @@
 import React from 'react'
 import { Text, RichText, Image, File, Repeater, types } from 'react-bricks/frontend'
-import { Map, Marker, GeoJsonLoader } from "pigeon-maps"
+import { Map, Marker, GeoJsonLoader, ZoomControl, Overlay } from "pigeon-maps"
+import { features } from 'process'
 
 interface Props {
   data: string
@@ -8,21 +9,43 @@ interface Props {
   
 }
 
-const MdwpMap: types.Brick<Props> = ({data}) => {
 
+
+const MdwpMap: types.Brick<Props> = ({data}) => {
+  const [center, setCenter] = React.useState([51.879, 5.6997])
+  const [zoom, setZoom] = React.useState(11)
+  
   return (
     data &&
     <div>
     
-    <Map height={1000} defaultCenter={[50.879, 4.6997]} defaultZoom={6}>
+    <Map 
+    
+      height={1000} 
+      center={[50.879, 9.6997]} 
+      zoom={9} 
+      
+      onBoundsChanged={({ center, zoom }) => { 
+        setCenter(center) 
+        setZoom(zoom) 
+      }} 
+    >
+    <ZoomControl />
+    
       <GeoJsonLoader
         link={data}
+        
         styleCallback={(feature, hover) =>
+          
+          
           hover
-            ? { fill: '#93c0d099', strokeWidth: '2'}
-            : { fill: '#d4e6ec99', strokeWidth: '1'}
-        }
+          ? { fill: '#f7c4c399', strokeWidth: '2'}
+          : { fill: '#c6d1fa99', strokeWidth: '1'}
+          
+          }
+        
       />
+      
     </Map>
     </div>
     ||
