@@ -15,6 +15,7 @@
     "classnames": "^2.3.1",
     "dayjs": "^1.10.8",
     "next": "^12.1.0",
+    "pigeon-maps": "^0.21.0",
     "prism-theme-night-owl": "^1.4.0",
     "prismjs": "^1.27.0",
     "prop-types": "^15.8.1",

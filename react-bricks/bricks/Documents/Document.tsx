@@ -29,7 +29,7 @@ const BrickDocument: types.Brick<DocumentProps> = ({ color, ...rest }) => {
       <File
         propName="file"
         renderBlock={file => {
-          console.log(file.url)
+          
           return file ? (
             
             <div className="w-full flex font-semibold h-full">
