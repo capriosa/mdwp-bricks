@@ -22,8 +22,8 @@ const MdwpMap: types.Brick<Props> = ({data}) => {
     <Map 
     
       height={1000} 
-      center={[50.879, 9.6997]} 
-      zoom={9} 
+      center={[50.879, 7.6997]} 
+      zoom={8} 
       
       onBoundsChanged={({ center, zoom }) => { 
         setCenter(center) 
