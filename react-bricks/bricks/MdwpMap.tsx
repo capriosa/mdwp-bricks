@@ -14,25 +14,32 @@ interface Props {
 const MdwpMap: types.Brick<Props> = ({data}) => {
   const [center, setCenter] = React.useState([51.879, 5.6997])
   const [zoom, setZoom] = React.useState(11)
-  const [selectedOption, setSelectedOption] = React.useState('https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/gemeinden_simplify200.geojson');
+  const [selectedOption, setSelectedOption] = React.useState(null);
   const options = [
     { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/gemeinden_simplify200.geojson', label: 'NRW' },
     { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/landkreise_simplify200.geojson', label: 'Baden-Württemberg' },
     { value: 'vanilla', label: 'Vanilla' }
   ]
 
+  const handleChange = (selectedOption) => {
+    
+    setSelectedOption(
+      selectedOption = selectedOption.value,
+    );
+  };
+
   const handleClick = ({ event, latLng, pixel }) => {
     console.log('Map clicked!', latLng, pixel)
   }
   
   return (
-    data &&
+    selectedOption &&
     <div>
     <Select 
         defaultValue={selectedOption}
-        onChange={setSelectedOption}
+        onChange={handleChange}
         options={options}/>
-    
+    {console.log(selectedOption)}
     <Map 
     
       height={1000} 
