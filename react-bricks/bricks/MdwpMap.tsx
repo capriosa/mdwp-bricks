@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, RichText, Image, File, Repeater, types } from 'react-bricks/frontend'
-import { Map, Marker, GeoJsonLoader, ZoomControl, Overlay } from "pigeon-maps"
-import { features } from 'process'
+import { Map, Marker, GeoJsonLoader, ZoomControl, Overlay, GeoJsonFeature } from "pigeon-maps"
+import Select from 'react-select'
 
 interface Props {
   data: string
@@ -14,10 +14,24 @@ interface Props {
 const MdwpMap: types.Brick<Props> = ({data}) => {
   const [center, setCenter] = React.useState([51.879, 5.6997])
   const [zoom, setZoom] = React.useState(11)
+  const [selectedOption, setSelectedOption] = React.useState('https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/gemeinden_simplify200.geojson');
+  const options = [
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/gemeinden_simplify200.geojson', label: 'NRW' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
+  ]
+
+  const handleClick = ({ event, latLng, pixel }) => {
+    console.log('Map clicked!', latLng, pixel)
+  }
   
   return (
     data &&
     <div>
+    <Select 
+        defaultValue={selectedOption}
+        onChange={setSelectedOption}
+        options={options}/>
     
     <Map 
     
@@ -25,6 +39,8 @@ const MdwpMap: types.Brick<Props> = ({data}) => {
       center={[50.879, 7.6997]} 
       zoom={8} 
       
+      onClick={handleClick}
+
       onBoundsChanged={({ center, zoom }) => { 
         setCenter(center) 
         setZoom(zoom) 
@@ -33,17 +49,17 @@ const MdwpMap: types.Brick<Props> = ({data}) => {
     <ZoomControl />
     
       <GeoJsonLoader
-        link={data}
+        link={selectedOption}
         
         styleCallback={(feature, hover) =>
           
-          
+         
           hover
           ? { fill: '#f7c4c399', strokeWidth: '2'}
           : { fill: '#c6d1fa99', strokeWidth: '1'}
           
-          }
-        
+          
+        }
       />
       
     </Map>

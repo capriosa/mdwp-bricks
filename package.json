@@ -28,6 +28,7 @@
     "react-intersection-visible": "^2.1.0",
     "react-pdf": "^5.7.1",
     "react-reveal": "^1.2.2",
+    "react-select": "^5.2.2",
     "swiper": "^6.8.4"
   },
   "devDependencies": {
