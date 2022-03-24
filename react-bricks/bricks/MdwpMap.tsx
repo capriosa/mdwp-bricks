@@ -17,7 +17,7 @@ const MdwpMap: types.Brick<Props> = ({data}) => {
   const [selectedOption, setSelectedOption] = React.useState('https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/gemeinden_simplify200.geojson');
   const options = [
     { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/gemeinden_simplify200.geojson', label: 'NRW' },
-    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/bw.geojson', label: 'Baden-Württemberg' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/landkreise_simplify200.geojson', label: 'Baden-Württemberg' },
     { value: 'vanilla', label: 'Vanilla' }
   ]
 
