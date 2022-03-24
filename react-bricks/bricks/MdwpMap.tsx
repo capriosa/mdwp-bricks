@@ -33,13 +33,15 @@ const MdwpMap: types.Brick<Props> = ({data}) => {
   }
   
   return (
-    selectedOption &&
+    
     <div>
     <Select 
         defaultValue={selectedOption}
         onChange={handleChange}
-        options={options}/>
-    {console.log(selectedOption)}
+        options={options}
+        className="w-64"
+        />
+      
     <Map 
     
       height={1000} 
@@ -71,10 +73,7 @@ const MdwpMap: types.Brick<Props> = ({data}) => {
       
     </Map>
     </div>
-    ||
-    <div className='text-center font-bold'>
-     Enter a link to Geo Json Data on the right sidebar
-    </div>
+    
     
   )
 }
