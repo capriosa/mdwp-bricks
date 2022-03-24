@@ -16,9 +16,19 @@ const MdwpMap: types.Brick<Props> = ({data}) => {
   const [zoom, setZoom] = React.useState(11)
   const [selectedOption, setSelectedOption] = React.useState(null);
   const options = [
-    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/gemeinden_simplify200.geojson', label: 'NRW' },
-    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/landkreise_simplify200.geojson', label: 'Baden-Württemberg' },
-    { value: 'vanilla', label: 'Vanilla' }
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/baden-wuerttenberg.geojson', label: 'Baden-Württemberg' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/bayern.geojson', label: 'Bayern' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/berlin-brandenburg.geojson', label: 'Berlin-Brandenburg' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/hessen.geojson', label: 'Hessen' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/rheinland-pfalz.geojson', label: 'Rheinland-Pfalz' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/mecklenburg.geojson', label: 'Mecklenburg-Vorpommern' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/niedersachen.geojson', label: 'Niedersachsen' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/nrw.geojson', label: 'Nordrhein-Westfalen' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/saarland.geojson', label: 'Saarlang' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/sachsen.geojson', label: 'Sachsen' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/sachsen-anhalt.geojson', label: 'Sachsen-Anhalt' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/schleswig-holstein.geojson', label: 'Schleswig-Holstein' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/thueringen.geojson', label: 'Thüringen' },
   ]
 
   const handleChange = (selectedOption) => {
