@@ -29,7 +29,8 @@ const MdwpMap: types.Brick<Props> = ({data}) => {
     { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/sachsen-anhalt.geojson', label: 'Sachsen-Anhalt' },
     { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/schleswig-holstein.geojson', label: 'Schleswig-Holstein' },
     { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/thueringen.geojson', label: 'Thüringen' },
-    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/maps.geojson', label: 'Marker' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/neue-laender.geojson', label: 'Alte Bundesländer' },
+    { value: 'https://raw.githubusercontent.com/capriosa/mdwp-bricks/main/neue-laender.geojson', label: 'Neue Bundesländer' },
   ]
 
   const handleChange = (selectedOption) => {
