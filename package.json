@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",
+    "airtable": "^0.11.3",
     "algoliasearch": "^4.12.2",
+    "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "dayjs": "^1.10.8",
     "next": "^12.1.0",
@@ -20,7 +22,7 @@
     "prismjs": "^1.27.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
-    "react-bricks": "^3.2.16",
+    "react-bricks": "^3.2.22",
     "react-bricks-ui": "^0.3.20",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",

@@ -31,6 +31,7 @@ import MdwpTestimonial  from './MdwpTestimonial'
 import BrickDocument from './Documents/Document'
 import Documents from './Documents/Documents'
 import MdwpMap from './MdwpMap'
+import Airtable from './Airtable'
 
 
 const bricks: types.Brick<any>[] = [
@@ -58,7 +59,8 @@ const bricks: types.Brick<any>[] = [
   Fact,
   Documents,
   BrickDocument,
-  MdwpMap
+  MdwpMap,
+  Airtable
   
   // Put here your other bricks...
 ]
