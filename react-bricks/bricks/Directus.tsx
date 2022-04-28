@@ -5,15 +5,16 @@ interface Props {
   
 }
 
-const Airtable: types.Brick<Props> = (props) => {
+const Directus: types.Brick<Props> = (props) => {
   
 const [opportunities, setOpportunities] = React.useState([]);
-const [categories, setCategories] = React.useState([]);
+//const [categories, setCategories] = React.useState([]);
 React.useEffect(() => {
-  fetch("https://api.airtable.com/v0/appmzC2p8qnCB5zCl/no-code?api_key=keyNCtBerQSTKwG1i")
+  fetch("https://qji2q4km.directus.app/items/products")
     .then((res) => res.json())
     .then((data) => {
-      setOpportunities(data.records);
+      
+      setOpportunities(data.data);
       
     })
     .catch((error) => {
@@ -29,12 +30,13 @@ console.log(opportunities)
       
       opportunities.map((record,index) => (
         
-        <div key={index} className="relative shadow-lg flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
-          <img className="block object-contain w-full" src={record.fields.Image[0].url} />
+        <div key={index} className="relative shadow-lg flex flex-col items-start justify-end col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
+         <img className="block object-contain w-full" src={`https://qji2q4km.directus.app/assets/${record.thumbnail}`} />
           <div className="relative z-20 w-full h-auto py-8 text-white bg-purple-500 border-t-0 border-yellow-200 px-7">
-          <a href="#_" className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-purple-500 bg-white">{record.fields.Category}</a>
-          <h2 className="mb-5 text-3xl font-bold"><a href="#_">{record.fields.Name}</a></h2>
-          <p className="mb-2 text-sm font-normal text-purple-100 opacity-100">{record.fields.Description}</p>
+          <span className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-purple-500 bg-gray-300">{record.price} $</span>
+          <h2 className="mb-5 text-3xl font-bold"><a href="#_">{record.name}</a></h2>
+          <p className="mb-2 text-sm font-bold text-purple-100 opacity-100">{record.vendor}</p>
+          <p className="mb-2 text-sm font-normal text-purple-100 opacity-100">{record.description}</p>
           
           
           </div>
@@ -46,9 +48,9 @@ console.log(opportunities)
   )
 }
 
-Airtable.schema = {
-  name: 'Airtable',
-  label: 'Airtable',
+Directus.schema = {
+  name: 'Directus',
+  label: 'Directus',
   // category: '',
   // tags: [],
 
@@ -61,4 +63,4 @@ Airtable.schema = {
   sideEditProps: [],
 }
 
-export default Airtable
+export default Directus
