@@ -29,9 +29,9 @@ console.log(opportunities)
       
       opportunities.map((record,index) => (
         
-        <div key={index} className="relative shadow-lg flex flex-col items-start justify-end h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
+        <div key={index} className="relative shadow-lg flex flex-col items-start justify-start bg-purple-500 h-full col-span-12 overflow-hidden rounded-xl group md:col-span-6 xl:col-span-4">
           <img className="block object-contain w-full" src={record.fields.Image[0].url} />
-          <div className="relative z-20 w-full h-auto py-8 text-white bg-purple-500 border-t-0 border-yellow-200 px-7">
+          <div className="relative z-20 w-full h-auto py-8 text-white border-t-0 border-yellow-200 px-7">
           <a href="#_" className="inline-block text-xs font-semibold absolute top-0 -mt-3.5 rounded-full px-4 py-2 uppercase text-purple-500 bg-white">{record.fields.Category}</a>
           <h2 className="mb-5 text-3xl font-bold"><a href="#_">{record.fields.Name}</a></h2>
           <p className="mb-2 text-sm font-normal text-purple-100 opacity-100">{record.fields.Description}</p>
