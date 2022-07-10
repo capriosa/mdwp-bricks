@@ -19,9 +19,6 @@ const Header: React.FC = () => (
             <Link href="/airtable">
               <a className="text-gray-200 hover:text-lime-600">Airtable Integration</a>
             </Link>
-            <Link href="/directus">
-              <a className="text-gray-200 hover:text-lime-600">Directus Integration</a>
-            </Link>
             <Link href="/products">
               <a className="text-gray-200 hover:text-lime-600">Snipcart Demo</a>
             </Link>

@@ -32,7 +32,7 @@ import BrickDocument from './Documents/Document'
 import Documents from './Documents/Documents'
 import MdwpMap from './MdwpMap'
 import Airtable from './Airtable'
-import Directus from  './Directus'
+
 
 
 const bricks: types.Brick<any>[] = [
@@ -61,8 +61,8 @@ const bricks: types.Brick<any>[] = [
   Documents,
   BrickDocument,
   MdwpMap,
-  Airtable,
-  Directus
+  Airtable
+
   
   // Put here your other bricks...
 ]

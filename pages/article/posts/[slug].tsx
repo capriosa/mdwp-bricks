@@ -55,7 +55,7 @@ export const getStaticPaths: GetStaticPaths = async (context) => {
   }
 
   const allPages = await fetchPages(config.apiKey, {
-    type: 'articles',
+    type: 'article',
     pageSize: 1000,
     sort: '-publishedAt',
   })
